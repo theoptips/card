@@ -1,0 +1,40 @@
+<!doctype html>
+<title></title>
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
+<script type=text/javascript src="{{url_for('static', filename='jquery.js') }}"></script>
+
+<main class='container' style='width:100%; margin-left=0'>
+
+  <div class= 'envbox' >
+  <div class='env'>
+    <label for='open-env'>
+      <div class='open-env'>
+      <label class='top' for='open-env'></label>
+      <div class='content'>
+        <h2>Merry Christmas!</h2>
+        <p> Thank you for being a part of a wonderful 2018!</p>
+        <a  class="btn" href="#" id="button">Reveal Your Greeting Card</a>
+      </div>
+      <div class='rest'></div>
+    </label>
+  </div>
+    </div>
+    </div>
+
+</main>
+
+<img src="{{url_for('static', filename='images/'+request.path+'.PNG')}}">
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $('img').hide();
+  $('#button').click(function(){
+    //console.log("i am click")
+    //$('img').offset({ top: -250, left: 300 });
+    $('.container').hide();
+    $('img').show();
+    $('img').animate({width: '100%', top:'50%'}, 800);
+  })
+})
+
+</script>
