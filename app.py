@@ -6,7 +6,8 @@ app = Flask(__name__)
 def render_static(page_name):
 	print("debugging")
 	print(page_name)
-	return render_template('%s.html' % page_name)
+	#return render_template('%s.html' % page_name)
+	return render_template('card.html')
  
 if __name__ == '__main__':
 	app.run()
